@@ -1,16 +1,86 @@
-# React + Vite
+# 🕌 تطبيق مواقيت الصلاة والطقس | Prayer Times & Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+تطبيق ويب حديث ومتجاوب لعرض مواقيت الصلاة والطقس الحالي لجميع محافظات جمهورية مصر العربية الـ 27 بشكل ديناميكي وجذاب.
 
-Currently, two official plugins are available:
+A modern, responsive web application to display prayer timings and current weather conditions dynamically for all 27 Egyptian governorates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌟 المميزات (Features)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **🕋 مواقيت الصلاة الدقيقة:** يعرض مواقيت الصلوات الخمس (الفجر، الظهر، العصر، المغرب، العشاء) ديناميكياً بناءً على الهيئة العامة المصرية للمساحة عبر واجهة برمجية.
+* **⏳ مؤقت تنازلي ذكي:** شاشة جانبية مخصصة تعرض المؤقت التنازلي المتبقي بدقة (بالثواني والمدد) للصلاة القادمة، مع دعم تلقائي للانتقال لصلاة الفجر في اليوم التالي بعد العشاء.
+* **🌤️ الطقس المباشر:** تبويب مخصص يعرض حالة الطقس الحالية للغلاف الجوي (درجة الحرارة، نسبة الرطوبة، سرعة الرياح) والتوصيف العام للطقس مع أيقونة تفاعلية ومتحركة.
+* **📍 كافة محافظات مصر الـ 27:** قائمة منسدلة كاملة تحتوي على جميع محافظات جمهورية مصر العربية مع إحداثياتها الجغرافية لربطها التلقائي بمواقيت الصلاة والطقس.
+* **🎨 تصميم زجاجي فاخر (Glassmorphism):** واجهة مستخدم مبهرة مع خلفية متناسقة، وتأثيرات ضبابية، وألوان دافئة، وحركة اهتزازية للأيقونات.
+* **⏳ تجربة تحميل سلسة (Smooth Skeleton Loading):** لوحة انتظار نابضة (Skeleton Loader) أثناء جلب البيانات وحركات خفوت تدريجية تمنع التغير المفاجئ في الأبعاد.
+* **📱 متجاوب بالكامل:** تصميم مرن يتكيف بشكل رائع مع مختلف أحجام الشاشات (الهواتف المحمولة، الأجهزة اللوحية، والشاشات المكتبية).
+* **📅 تنسيق التاريخ العربي الفاخر:** يعرض التاريخ الهجري والميلادي واليوم بشكل نصي عربي أصيل.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+
+* **React (React 19)** - لبناء المكونات وإدارة حالات التطبيق.
+* **Vite** - بيئة عمل التطبيق لبناء سريع وخفيف.
+* **Axios** - للاتصال بالخوادم وجلب بيانات مواقيت الصلاة والطقس.
+* **Vanilla CSS** - لتصميم الواجهة بشكل متكامل وتأثيرات زجاجية وحركات انتقالية ذكية.
+* **Aladhan API** - لجلب مواقيت الصلاة المحدثة للمحافظات.
+* **Open-Meteo API** - لجلب حالة الطقس الحالية مجاناً بدون الحاجة لمفاتيح وصول.
+
+---
+
+## 🚀 طريقة التشغيل محلياً (How to Run Locally)
+
+### المتطلبات الأساسية (Prerequisites)
+تأكد من تثبيت بيئة **Node.js** على جهازك.
+
+### الخطوات (Steps)
+
+1. **نسخ المشروع (Clone the Repository):**
+   ```bash
+   git clone https://github.com/El3gamy110/prayer-times-and-weather-app.git
+   cd prayer-times-and-weather-app
+   ```
+
+2. **تثبيت الحزم والمكتبات (Install Dependencies):**
+   ```bash
+   npm install
+   ```
+
+3. **تشغيل خادم التطوير (Run Development Server):**
+   ```bash
+   npm run dev
+   ```
+
+4. **معاينة التطبيق (Open App):**
+   افتح المتصفح على الرابط الافتراضي: `http://localhost:5173/`
+
+---
+
+## 📂 الهيكل البرمجي (Folder Structure)
+
+```text
+├── public/
+│   ├── favicon.png          # أيقونة الموقع (مستوحاة من المسجد)
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   │   └── bg.jpg           # الخلفية الفنية للموقع
+│   ├── Components/
+│   │   └── prayer.jsx       # مكون عرض توقيت الصلاة الفردية
+│   ├── App.css
+│   ├── App.jsx              # الكود الرئيسي للتطبيق والمنطق الحسابي
+│   ├── index.css            # ملف التنسيق العام والـ Media Queries والتأثيرات
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+---
+
+## 🔗 روابط هامة (Links)
+
+* **المستودع على GitHub:** [prayer-times-and-weather-app](https://github.com/El3gamy110/prayer-times-and-weather-app)
+* **المطور:** [El3gamy110](https://github.com/El3gamy110)
