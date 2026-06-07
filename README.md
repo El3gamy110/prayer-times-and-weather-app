@@ -80,5 +80,6 @@ Make sure you have **Node.js** installed on your local system.
 
 ## 🔗 Repository Links
 
+* **Live Deployment Website:** [Prayer Times & Weather App](https://el3gamy110.github.io/prayer-times-and-weather-app/)
 * **GitHub Repository:** [prayer-times-and-weather-app](https://github.com/El3gamy110/prayer-times-and-weather-app)
 * **Developer:** [El3gamy110](https://github.com/El3gamy110)
