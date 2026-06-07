@@ -1,77 +1,75 @@
-# 🕌 تطبيق مواقيت الصلاة والطقس | Prayer Times & Weather App
+# 🕌 Prayer Times & Weather App
 
-تطبيق ويب حديث ومتجاوب لعرض مواقيت الصلاة والطقس الحالي لجميع محافظات جمهورية مصر العربية الـ 27 بشكل ديناميكي وجذاب.
-
-A modern, responsive web application to display prayer timings and current weather conditions dynamically for all 27 Egyptian governorates.
+A modern, responsive web application designed to display prayer timings and current weather conditions dynamically for all 27 Egyptian governorates.
 
 ---
 
-## 🌟 المميزات (Features)
+## 🌟 Features
 
-* **🕋 مواقيت الصلاة الدقيقة:** يعرض مواقيت الصلوات الخمس (الفجر، الظهر، العصر، المغرب، العشاء) ديناميكياً بناءً على الهيئة العامة المصرية للمساحة عبر واجهة برمجية.
-* **⏳ مؤقت تنازلي ذكي:** شاشة جانبية مخصصة تعرض المؤقت التنازلي المتبقي بدقة (بالثواني والمدد) للصلاة القادمة، مع دعم تلقائي للانتقال لصلاة الفجر في اليوم التالي بعد العشاء.
-* **🌤️ الطقس المباشر:** تبويب مخصص يعرض حالة الطقس الحالية للغلاف الجوي (درجة الحرارة، نسبة الرطوبة، سرعة الرياح) والتوصيف العام للطقس مع أيقونة تفاعلية ومتحركة.
-* **📍 كافة محافظات مصر الـ 27:** قائمة منسدلة كاملة تحتوي على جميع محافظات جمهورية مصر العربية مع إحداثياتها الجغرافية لربطها التلقائي بمواقيت الصلاة والطقس.
-* **🎨 تصميم زجاجي فاخر (Glassmorphism):** واجهة مستخدم مبهرة مع خلفية متناسقة، وتأثيرات ضبابية، وألوان دافئة، وحركة اهتزازية للأيقونات.
-* **⏳ تجربة تحميل سلسة (Smooth Skeleton Loading):** لوحة انتظار نابضة (Skeleton Loader) أثناء جلب البيانات وحركات خفوت تدريجية تمنع التغير المفاجئ في الأبعاد.
-* **📱 متجاوب بالكامل:** تصميم مرن يتكيف بشكل رائع مع مختلف أحجام الشاشات (الهواتف المحمولة، الأجهزة اللوحية، والشاشات المكتبية).
-* **📅 تنسيق التاريخ العربي الفاخر:** يعرض التاريخ الهجري والميلادي واليوم بشكل نصي عربي أصيل.
-
----
-
-## 🛠️ التقنيات المستخدمة (Tech Stack)
-
-* **React (React 19)** - لبناء المكونات وإدارة حالات التطبيق.
-* **Vite** - بيئة عمل التطبيق لبناء سريع وخفيف.
-* **Axios** - للاتصال بالخوادم وجلب بيانات مواقيت الصلاة والطقس.
-* **Vanilla CSS** - لتصميم الواجهة بشكل متكامل وتأثيرات زجاجية وحركات انتقالية ذكية.
-* **Aladhan API** - لجلب مواقيت الصلاة المحدثة للمحافظات.
-* **Open-Meteo API** - لجلب حالة الطقس الحالية مجاناً بدون الحاجة لمفاتيح وصول.
+* **🕋 Precise Prayer Timings:** Displays the five daily prayer timings (Fajr, Dhuhr, Asr, Maghrib, Isha) fetched dynamically from the Aladhan API.
+* **⏳ Smart Countdown Timer:** A dedicated side-panel showing a real-time (1-second ticking) countdown to the next upcoming prayer. It automatically handles wrapping around to tomorrow's Fajr prayer after Isha.
+* **🌤️ Live Weather Integration:** A dedicated tab showing live local weather metrics (temperature, relative humidity, wind speed) and weather conditions, powered by the free Open-Meteo API.
+* **📍 All 27 Egyptian Governorates:** A dropdown list containing all 27 Egyptian governorates preconfigured with their precise GPS coordinates for instant API calculations.
+* **🎨 Glassmorphic UI/UX:** A stunning, premium user interface with semi-translucent cards, dark-red accenting, custom typography (Almarai), and interactive micro-animations (e.g., floating weather icons).
+* **⏳ Smooth Skeleton Loaders:** Pulsing skeleton loaders that mirror the card layouts during data fetches, preventing abrupt layout shifts.
+* **📱 Fully Responsive:** Adapts beautifully across smartphones, tablets, and desktop monitors using media queries.
+* **📅 Localized Date Display:** Displays the current date in a beautiful, localized format.
 
 ---
 
-## 🚀 طريقة التشغيل محلياً (How to Run Locally)
+## 🛠️ Tech Stack
 
-### المتطلبات الأساسية (Prerequisites)
-تأكد من تثبيت بيئة **Node.js** على جهازك.
+* **React (React 19)** - Component-based UI rendering and state management.
+* **Vite** - High-performance frontend tooling and dev server.
+* **Axios** - Network request handling for fetching prayer and weather data.
+* **Vanilla CSS** - Design elements, layouts (flexbox/grid), visual effects, and animations.
+* **Aladhan API** - Source for updated prayer timings.
+* **Open-Meteo API** - Source for coordinate-mapped local weather updates.
 
-### الخطوات (Steps)
+---
 
-1. **نسخ المشروع (Clone the Repository):**
+## 🚀 Installation & Local Run
+
+### Prerequisites
+Make sure you have **Node.js** installed on your local system.
+
+### Steps
+
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/El3gamy110/prayer-times-and-weather-app.git
    cd prayer-times-and-weather-app
    ```
 
-2. **تثبيت الحزم والمكتبات (Install Dependencies):**
+2. **Install Dependencies:**
    ```bash
    npm install
    ```
 
-3. **تشغيل خادم التطوير (Run Development Server):**
+3. **Start the Local Server:**
    ```bash
    npm run dev
    ```
 
-4. **معاينة التطبيق (Open App):**
-   افتح المتصفح على الرابط الافتراضي: `http://localhost:5173/`
+4. **Open in Browser:**
+   Navigate to the default URL: `http://localhost:5173/`
 
 ---
 
-## 📂 الهيكل البرمجي (Folder Structure)
+## 📂 Project Directory Structure
 
 ```text
 ├── public/
-│   ├── favicon.png          # أيقونة الموقع (مستوحاة من المسجد)
+│   ├── favicon.png          # Mosque-themed app icon
 │   └── icons.svg
 ├── src/
 │   ├── assets/
-│   │   └── bg.jpg           # الخلفية الفنية للموقع
+│   │   └── bg.jpg           # Premium background image
 │   ├── Components/
-│   │   └── prayer.jsx       # مكون عرض توقيت الصلاة الفردية
+│   │   └── prayer.jsx       # Component for rendering individual prayer timings
 │   ├── App.css
-│   ├── App.jsx              # الكود الرئيسي للتطبيق والمنطق الحسابي
-│   ├── index.css            # ملف التنسيق العام والـ Media Queries والتأثيرات
+│   ├── App.jsx              # Main logic, states, and app wrapper
+│   ├── index.css            # Stylesheets, layouts, and responsiveness media queries
 │   └── main.jsx
 ├── index.html
 ├── package.json
@@ -80,7 +78,7 @@ A modern, responsive web application to display prayer timings and current weath
 
 ---
 
-## 🔗 روابط هامة (Links)
+## 🔗 Repository Links
 
-* **المستودع على GitHub:** [prayer-times-and-weather-app](https://github.com/El3gamy110/prayer-times-and-weather-app)
-* **المطور:** [El3gamy110](https://github.com/El3gamy110)
+* **GitHub Repository:** [prayer-times-and-weather-app](https://github.com/El3gamy110/prayer-times-and-weather-app)
+* **Developer:** [El3gamy110](https://github.com/El3gamy110)
