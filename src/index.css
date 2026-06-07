@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Almarai", sans-serif;
+}
+
+html{
+  direction: rtl;
+}
+
+.app_wrapper {
+  background: url(assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .container {
+  width: 550px;
+  background: #332a224e;
+  padding: 30px 25px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid #E8EDF2;
+  margin-right: 10%;
+}
+
+section .top_section{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E8EDF2;
+  margin-bottom: 30px;
+}
+
+section .top_section select{
+  width: 150px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 10px;
+  background-color: #9A3F3F;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+section .top_section h3{
+  color: #fff;
+  font-size: 18px;
+}
+
+section .top_section .date{
+  width: 160px;
+  text-align: center;
+}
+
+section .top_section .date h4{
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+section .top_section .countdown{
+  width: 160px;
+  text-align: left;
+}
+
+section .top_section .countdown h4{
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+section .prayer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #9A3F3F;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+section .countdown_container {
+  width: 320px;
+  background: #332a224e;
+  padding: 30px 25px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid #E8EDF2;
+  margin-right: 440px;
+  text-align: center;
+  color: #fff;
+}
+
+section .countdown_container h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+section .countdown_container .prayer_name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFE6A7;
+  margin-bottom: 25px;
+}
+
+section .countdown_container .timer {
+  font-size: 38px;
+  font-weight: 800;
+  font-family: monospace, sans-serif;
+  letter-spacing: 2px;
+  background: rgba(154, 63, 63, 0.85);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  direction: ltr;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(51, 42, 34, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(232, 237, 242, 0.2);
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar button.active {
+  background: #9A3F3F;
+  box-shadow: 0 4px 10px rgba(154, 63, 63, 0.3);
+}
+
+/* Weather Container Styling */
+section .weather_container {
+  width: 450px;
+  background: #332a224e;
+  padding: 30px 25px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid #E8EDF2;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+section .weather_container .weather_info {
+  margin-top: 30px;
+}
+
+section .weather_container .weather_icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+section .weather_container .weather_temp {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+section .weather_container .weather_status {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFE6A7;
+  margin-bottom: 30px;
+}
+
+section .weather_container .weather_details {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(154, 63, 63, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+section .weather_container .detail_item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+section .weather_container .detail_item .label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+section .weather_container .detail_item .val {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+section .weather_container .loading {
+  font-size: 18px;
+  padding: 40px 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Transitions & Loading State */
+.container, .countdown_container, .weather_container, .weather_info {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.loading_active {
+  opacity: 0.5;
+  transform: scale(0.99);
+  pointer-events: none;
+}
+
+/* Skeleton loader styles */
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.skeleton_circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px auto 20px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton_text {
+  height: 20px;
+  border-radius: 4px;
+  margin: 10px auto;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton_temp {
+  width: 100px;
+  height: 56px;
+}
+
+.skeleton_status {
+  width: 150px;
+  height: 24px;
+  margin-bottom: 30px;
+}
+
+.skeleton_details {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.skeleton_label {
+  width: 60px;
+  height: 14px;
+}
+
+.skeleton_val {
+  width: 40px;
+  height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  .app_wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  section {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    height: auto;
+    overflow-y: auto;
+    gap: 30px;
+  }
+
+  section .container {
+    width: 100%;
+    max-width: 550px;
+    margin-right: 0;
+    margin: 0 auto !important;
+  }
+
+  section .countdown_container {
+    width: 100%;
+    max-width: 550px;
+    margin-right: 0;
+    margin: 0 auto !important;
+  }
+
+  section .weather_container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .navbar button {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  section {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  section .container, section .countdown_container, section .weather_container {
+    padding: 20px 15px;
+  }
+
+  section .top_section h3 {
+    font-size: 18px;
+  }
+
+  section .top_section select {
+    font-size: 16px;
+    width: 120px;
+  }
+
+  section .top_section .date h4 {
+    font-size: 16px;
+  }
+
+  section .countdown_container h2 {
+    font-size: 18px;
+  }
+
+  section .countdown_container .prayer_name {
+    font-size: 26px;
+  }
+
+  section .countdown_container .timer {
+    font-size: 32px;
+    padding: 10px 15px;
+  }
+
+  section .weather_container .weather_temp {
+    font-size: 44px;
+  }
+
+  section .weather_container .weather_icon {
+    font-size: 60px;
+  }
+}
